@@ -8,3 +8,6 @@
 /config-1/*.lock
 /config-2/*.lock
 /config-3/*.lock
+/config-1
+/config-2
+/config-3
