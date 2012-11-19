@@ -1,0 +1,1 @@
+"C:\Program Files\Mongo\bin\mongod.exe" --shardsvr --replSet shard-b --dbpath C:\MongoShard\data\rs-b-1 --port 30100 --logpath C:\MongoShard\data\rs-b-1.log --nojournal
