@@ -4,3 +4,7 @@
 /rs-b-1
 /rs-b-2
 /rs-b-3
+/*.log
+/config-1/*.lock
+/config-2/*.lock
+/config-3/*.lock
