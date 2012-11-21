@@ -1,1 +1,1 @@
-"C:\Program Files\Mongo\bin\mongod.exe" --configsvr --dbpath C:\MongoShard\data\config-2 --port 27020 --nojournal
+"C:\Program Files\Mongo\bin\mongod.exe" --configsvr --dbpath C:\MongoShard\data\config-2 --port 27020 --nojournal %1
