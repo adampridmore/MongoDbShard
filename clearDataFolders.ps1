@@ -1,0 +1,9 @@
+del .\rs-a-1\*
+del .\rs-a-2\*
+del .\rs-a-3\*
+del .\rs-b-1\*
+del .\rs-b-2\*
+del .\rs-b-3\*
+del .\config-1\*
+del .\config-2\*
+del .\config-3\*
