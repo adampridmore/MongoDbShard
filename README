@@ -1,0 +1,56 @@
+This is a windows sample for creating a two shard server.
+
+Open a powershell window and run:
+
+To set up and configure:
+
+	createDataFolders.ps1			- This creates the data folders for all the mongo instances
+	configure.ps1					- This configures the two replica sets and creates a sharded server.
+
+To run (once setup and configured):
+	runAll.bat
+
+Configuration:
+==============
+
+shard-a (This is a replica set) - Has 2 dabase instances and an arbiter.
+
+	port 30000		Database
+	port 30001		Database
+	port 30002		Arbiter
+
+shard-b (This is a replica set) - Has 2 dabase instances and an arbiter.
+
+	port 30100		Database
+	port 30101		Database
+	port 30102		Arbiter
+	
+Config Servers:
+	port 27019
+	port 27020
+	port 27012
+
+MongoS:
+	port 40000
+	
+	
+Usage:
+======
+
+Connect to the MongoS as you would connect to MongoDB normally on Port 40000.
+
+To create a sharded collection:
+===============================
+
+Connect the mongoDb shell to the MongoS and run the following commands:
+
+sh.enableSharding('stockroom')
+sh.shardCollection('stockroom.products', {productType: 1, _id: 1})
+
+Usefull Commands:
+
+sh.status()
+	Displays the sharded database and collections. It also shows the chunking rules / configuration..
+	
+rs.status()
+	When connected to a member of a replica set, this shows the status of all the members. e.g. Primary, Secondary and Arbiter (other status are available).
