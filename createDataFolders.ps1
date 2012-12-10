@@ -1,0 +1,9 @@
+mkdir rs-a-1
+mkdir rs-a-2
+mkdir rs-a-3
+mkdir rs-b-1
+mkdir rs-b-2
+mkdir rs-b-3
+mkdir config-1
+mkdir config-2
+mkdir config-3
