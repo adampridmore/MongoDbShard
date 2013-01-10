@@ -44,8 +44,10 @@ To create a sharded collection:
 
 Connect the mongoDb shell to the MongoS and run the following commands:
 
-sh.enableSharding('stockroom')
-sh.shardCollection('stockroom.products', {productType: 1, _id: 1})
+use Test_System_CustomersShared;
+sh.enableSharding('Test_System_CustomersShared')
+db.routeResult.createIndex({customerId: 1, assetId:1});
+sh.shardCollection('Test_System_CustomersShared.routeResult', {customerId: 1, assetId:1})
 
 Usefull Commands:
 
